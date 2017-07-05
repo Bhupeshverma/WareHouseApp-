@@ -1,0 +1,45 @@
+<template name="Dashboard">
+	{{#if isInRole 'admin'}}
+    	<h1 class="page-title">Dashboard</h1>
+    	<div class="col-lg-2">
+    		<div class="card">
+    			<header style="background: #008080; color: white">
+    				<p>Order Details</p>
+    			</header>
+    		</div>
+    	</div>
+    	<div class="col-lg-8">
+    	<table>
+    		<thead>
+    			<tr>
+    				<th>
+    				OrderId
+    				</th>
+    				<th>
+    				Product Image
+    				</th>
+    				<th>
+    				Product Detail
+    				</th>
+    				<th>
+    				Quantity
+    				</th>
+    				<th>
+    				Location
+    				</th>
+    				<th>
+    				Status
+    				</th>
+
+    			</tr>
+    		</thead>
+
+    	</table>
+
+    	</div>
+
+	{{else}}
+		<h1>Not Authorized</h1>
+	{{/if}}
+
+</template>
